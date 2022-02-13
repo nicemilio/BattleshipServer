@@ -5,6 +5,6 @@ import org.springframework.stereotype.Service;
 @Service
 public class MainService {
     public String getName (){
-        return "Nic Thomas";
+        return "Lachlan McDowall";
     }
 }
