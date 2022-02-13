@@ -11,12 +11,17 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class MainController {
     @Autowired
-    SetupService service;
+    SetupService setupService;
 
 
     @GetMapping(value={"/", "/setup"})
     public String setup(Model model){
-        model.addAttribute("name", service.getName());
+        return "index";
+    }
+
+    @GetMapping(value={"/solo"})
+    public String solo(Model model){
+        //setupService.placeShips(true);
         return "beliebig/hello";
     }
 }
